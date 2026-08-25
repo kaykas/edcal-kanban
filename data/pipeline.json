@@ -1,0 +1,81 @@
+{
+  "last_sync": "2026-08-24T17:13:37.487534",
+  "week": "2026-08-24",
+  "cards": [
+    {
+      "id": "story_showcase_map",
+      "title": "Portfolio Showcase Map Clears Production for Enterprise Brands",
+      "deck": "Rollout of interactive multi-property 3D exploration map for Hyatt, Accor, and IHG portfolios. GTM date confirmed Aug 24.",
+      "pillar": "Product Release",
+      "channel": "Press / Blog",
+      "author": "Kat Eller Murray",
+      "targetDate": "Aug 25",
+      "stage": "scheduled",
+      "assets": {
+        "graphic": true,
+        "quotes": true,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_vq_strategy",
+      "title": "Visual Quality (VQ) \u2014 Category Creation & Strategic Framework",
+      "deck": "Defining the 3-pillar diagnostic scoring model (Fidelity, Navigation, Staging) and 7-tier maturity ladder for spatial hospitality.",
+      "pillar": "Visual Quality (VQ)",
+      "channel": "Strategy / LinkedIn",
+      "author": "Christian Averill",
+      "targetDate": "Aug 26",
+      "stage": "review",
+      "assets": {
+        "graphic": true,
+        "quotes": true,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_manual_ops",
+      "title": "The Real Cost of Manual Operations in Modern Hospitality GTM",
+      "deck": "Analysis of how automated 3D digital twins collapse sales cycle friction for convention centers.",
+      "pillar": "Thought Leadership",
+      "channel": "Substack / Media",
+      "author": "Jascha Kaykas-Wolff",
+      "targetDate": "Sep 02",
+      "stage": "drafting",
+      "assets": {
+        "graphic": true,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_sales_demo_velocity",
+      "title": "Case Study: Accelerating Inbound Demos Across 24 Sales Reps",
+      "deck": "How AI coaching and MEDDPICC framework alignment lifted High Velocity quota pacing by 34%.",
+      "pillar": "Customer Impact",
+      "channel": "Blog / LinkedIn",
+      "author": "Christian Averill",
+      "targetDate": "Sep 08",
+      "stage": "outlining",
+      "assets": {
+        "graphic": false,
+        "quotes": true,
+        "metrics": false
+      }
+    },
+    {
+      "id": "story_code_review",
+      "title": "Automated Code Review & AI Agent Governance in Production",
+      "deck": "Brief on HOLD pending Plane 1 slot decision. Architectural analysis of multi-agent verification gates.",
+      "pillar": "Thought Leadership",
+      "channel": "LinkedIn / Technical Blog",
+      "author": "Jascha Kaykas-Wolff",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    }
+  ]
+}
