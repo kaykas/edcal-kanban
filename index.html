@@ -317,15 +317,14 @@
         };
 
         const loginWithGoogle = () => {
-          // In production, opens Google OAuth window or prompts email verification
-          const email = prompt("Enter your Visiting Media email to authenticate:", "christian@visitingmedia.com");
+          const email = prompt("Enter your email to authenticate:", "christian@qualityproduceusa.com");
           if (email) {
-            const domain = email.split('@')[1] || '';
-            const allowed = ['visitingmedia.com', 'kaykas.com', 'roamkat.com', 'perrylaw.net'];
-            if (allowed.includes(domain.toLowerCase()) || email.includes('christian') || email.includes('kat')) {
+            const domain = (email.split('@')[1] || '').toLowerCase();
+            const allowed = ['qualityproduceusa.com', 'visitingmedia.com', 'kaykas.com', 'roamkat.com', 'perrylaw.net'];
+            if (allowed.includes(domain) || email.toLowerCase().includes('christian') || email.toLowerCase().includes('kat')) {
               loginSuccess(email);
             } else {
-              alert("Access Denied: Please sign in with an authorized @visitingmedia.com or collaborator account.");
+              alert("Access Denied: Please sign in with an authorized @qualityproduceusa.com or @visitingmedia.com account.");
             }
           }
         };
