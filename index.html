@@ -276,52 +276,27 @@
           { id: 'scheduled', title: 'Live & Distributed', colorDot: 'bg-teal-400' }
         ];
 
-        const cards = ref([
-          {
-            id: '1',
-            title: 'Visual Quality (VQ) — Category Creation & Strategy Memo',
-            deck: 'Defining the 3-pillar diagnostic scoring model (Fidelity, Navigation, Staging) and 7-tier maturity ladder for spatial hospitality.',
-            pillar: 'Visual Quality (VQ)',
-            channel: 'Strategy / LinkedIn',
-            author: 'Christian Averill',
-            targetDate: 'Aug 26',
-            stage: 'review',
-            assets: { graphic: true, quotes: true, metrics: true }
-          },
-          {
-            id: '2',
-            title: 'Portfolio Showcase Map Clears Production for Enterprise Brands',
-            deck: 'Rollout of interactive multi-property 3D exploration map for Hyatt, Accor, and IHG portfolios.',
-            pillar: 'Product Release',
-            channel: 'Press / Blog',
-            author: 'Kat Eller Murray',
-            targetDate: 'Aug 25',
-            stage: 'scheduled',
-            assets: { graphic: true, quotes: true, metrics: true }
-          },
-          {
-            id: '3',
-            title: 'The Real Cost of Manual Operations in Modern Hospitality GTM',
-            deck: 'Analysis of how automated 3D digital twins collapse sales cycle friction for convention centers.',
-            pillar: 'Thought Leadership',
-            channel: 'Substack / Media',
-            author: 'Jascha Kaykas-Wolff',
-            targetDate: 'Sep 02',
-            stage: 'drafting',
-            assets: { graphic: true, quotes: false, metrics: true }
-          },
-          {
-            id: '4',
-            title: 'Case Study: Accelerating Inbound Demos Across 24 Sales Reps',
-            deck: 'How AI coaching and MEDDPICC framework alignment lifted High Velocity quota pacing by 34%.',
-            pillar: 'Customer Impact',
-            channel: 'Blog / LinkedIn',
-            author: 'Christian Averill',
-            targetDate: 'Sep 08',
-            stage: 'outlining',
-            assets: { graphic: false, quotes: true, metrics: false }
+        const cards = ref([]);
+        const lastSync = ref('Live Sync');
+
+        // Fetch live QP-COMMS pipeline data
+        const loadPipeline = async () => {
+          try {
+            const res = await fetch('/data/pipeline.json', { cache: 'no-store' });
+            if (res.ok) {
+              const data = await res.json();
+              if (data.cards && data.cards.length > 0) {
+                cards.value = data.cards;
+                lastSync.value = new Date(data.last_sync).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+              }
+            }
+          } catch (e) {
+            console.log('Using local fallback state', e);
           }
-        ]);
+          nextTick(() => lucide.createIcons());
+        };
+
+        loadPipeline();
 
         const selectedPillar = ref('');
         const selectedAuthor = ref('');
