@@ -1,5 +1,5 @@
 {
-  "last_sync": "2026-08-24T18:00:00.000000",
+  "last_sync": "2026-08-25T18:48:15.538616",
   "week": "2026-08-24",
   "cards": [
     {
@@ -22,7 +22,7 @@
     },
     {
       "id": "story_vq_strategy",
-      "title": "Visual Quality (VQ) — Category Creation & Strategic Framework",
+      "title": "Visual Quality (VQ) \u2014 Category Creation & Strategic Framework",
       "deck": "Defining the 3-pillar diagnostic scoring model (Fidelity, Navigation, Staging) and 7-tier maturity ladder for spatial hospitality.",
       "pillar": "Visual Quality (VQ)",
       "channel": "Strategy / LinkedIn",
@@ -89,6 +89,222 @@
       "assets": {
         "graphic": false,
         "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_google_agentic",
+      "title": "Google Ask Maps & Agentic Booking: Hospitality's Distribution Shift",
+      "deck": "Google is piloting Ask Maps and agentic booking flows directly in search results. When AI agents synthesize bookings directly, hotels that don't control their data layer lose brand margin.",
+      "pillar": "Thought Leadership",
+      "channel": "LinkedIn / Press",
+      "author": "Jascha Kaykas-Wolff",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Jascha Kaykas-Wolff",
+      "nextAction": "Awaiting Author Review & Sign-Off",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": true,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_diagramming_displacement",
+      "title": "Winning on Spatial Ground: How Diagramming Displaces Legacy Hospitality Tech",
+      "deck": "Analysis of high-velocity competitive displacements of Cvent/Social Tables across enterprise convention centers (Hilton Chicago, Drake, Palmer House).",
+      "pillar": "Customer Impact",
+      "channel": "Blog / LinkedIn",
+      "author": "Christian Averill",
+      "leadEditor": "Kat Eller Murray",
+      "actionOwner": "Christian Averill",
+      "nextAction": "Byline & Deal Clearance Sign-Off",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": false,
+        "quotes": true,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_prismm_sunset",
+      "title": "Prismm Sunset & The Transition to Spatial Digital Twins",
+      "deck": "Prismm's sunset creates an urgent migration window for enterprise hotel event spaces. Why spatial digital twins offer a permanent data foundation.",
+      "pillar": "Thought Leadership",
+      "channel": "LinkedIn / Blog",
+      "author": "Jascha Kaykas-Wolff",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Christian Averill",
+      "nextAction": "Author Quote Review",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": true,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_accor_fee_splits",
+      "title": "Accor, OTAs, and the Shifting Economics of Brand Fee Splits",
+      "deck": "Examining brand fee splits and direct booking distribution in hospitality following major European hotel group shifts and OTA negotiations.",
+      "pillar": "Thought Leadership",
+      "channel": "LinkedIn / Media",
+      "author": "Jascha Kaykas-Wolff",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Jascha Kaykas-Wolff",
+      "nextAction": "Editorial Sign-Off",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": false,
+        "quotes": true,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_quarterly_recap_automation",
+      "title": "Automating Quarterly Customer Recaps with AI & Engagement Telemetry",
+      "deck": "How automated quarterly engagement reporting turns passive CS interactions into active renewal and expansion drivers.",
+      "pillar": "Customer Impact",
+      "channel": "Blog / LinkedIn",
+      "author": "Christian Averill",
+      "leadEditor": "Kat Eller Murray",
+      "actionOwner": "Kat Eller Murray",
+      "nextAction": "Angle Review",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": false,
+        "quotes": true,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_activity_log_launch",
+      "title": "Activity Log Launch: Real-Time Audit Trails for Spatial Assets",
+      "deck": "Enterprise property groups manage thousands of digital assets. Activity Log delivers full operational auditability and team permissions.",
+      "pillar": "Product Release",
+      "channel": "Press / Blog",
+      "author": "Kat Eller Murray",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Kat Eller Murray",
+      "nextAction": "Feature Overview Draft",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": true,
+        "quotes": false,
+        "metrics": false
+      }
+    },
+    {
+      "id": "story_hotelport_content_layer",
+      "title": "Visiting Media & HotelPORT: The Verified Content Layer for Hospitality AI",
+      "deck": "Why verified spatial content and structured property metadata are essential prerequisites for AI travel search and conversational booking engines.",
+      "pillar": "Thought Leadership",
+      "channel": "LinkedIn / Press",
+      "author": "Jascha Kaykas-Wolff",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Jascha Kaykas-Wolff",
+      "nextAction": "Partnership Narrative Align",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": true,
+        "quotes": true,
+        "metrics": false
+      }
+    },
+    {
+      "id": "story_hilton_palacio_del_rio",
+      "title": "Customer Showcase: Hilton Palacio del Rio Deploys Spatial Digital Twins",
+      "deck": "San Antonio landmark hotel adopts full 3D spatial presentation across River Walk event venues and guest rooms, driving immediate group planner engagement.",
+      "pillar": "Customer Impact",
+      "channel": "Blog / Press",
+      "author": "Kat Eller Murray",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Kat Eller Murray",
+      "nextAction": "Customer Rights Clearance",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": true,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_canopy_nashville_gulch",
+      "title": "Customer Showcase: Canopy by Hilton Nashville The Gulch",
+      "deck": "Lifestyle property launches TrueTour immersive experiences to showcase boutique meeting spaces and urban guest rooms to luxury travelers and event planners.",
+      "pillar": "Customer Impact",
+      "channel": "Blog / Press",
+      "author": "Kat Eller Murray",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Kat Eller Murray",
+      "nextAction": "Customer Rights Clearance",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": true,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_harness_loop_pattern",
+      "title": "The Harness-Loop Pattern: Resilient AI Workflows in Production",
+      "deck": "Building deterministic self-healing loops and verification harnesses for production agent systems without human babysitting.",
+      "pillar": "Thought Leadership",
+      "channel": "LinkedIn / Technical Blog",
+      "author": "Jascha Kaykas-Wolff",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Christian Averill",
+      "nextAction": "Technical Accuracy Review",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story_batz_spotlight",
+      "title": "Behind the Lens: Scaling Global 3D Spatial Capture Operations",
+      "deck": "Spotlight on how field operations and 3D capture teams maintain millimeter-accurate spatial fidelity across thousands of properties globally.",
+      "pillar": "Visual Quality (VQ)",
+      "channel": "Blog / LinkedIn",
+      "author": "Kat Eller Murray",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Kat Eller Murray",
+      "nextAction": "Interview & Quote Sourcing",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": true,
+        "quotes": false,
+        "metrics": false
+      }
+    },
+    {
+      "id": "story_bonafide_ai_accuracy",
+      "title": "1 in 3 AI Answers About Hotels Are Wrong: The Spatial Truth Defense",
+      "deck": "Webinar data reveals that 33% of generative AI hotel answers contain factual errors. How verified spatial data sources solve the LLM hallucination gap.",
+      "pillar": "Visual Quality (VQ)",
+      "channel": "LinkedIn / Blog",
+      "author": "Jascha Kaykas-Wolff",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Christian Averill",
+      "nextAction": "Data Synthesis & Outline",
+      "targetDate": "Backlog",
+      "stage": "backlog",
+      "assets": {
+        "graphic": false,
+        "quotes": true,
         "metrics": true
       }
     }
