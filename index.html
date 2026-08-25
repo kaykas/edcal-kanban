@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visiting Media — Visual Editorial Calendar</title>
+  
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          },
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              500: '#0f766e',
+              600: '#0d9488',
+              900: '#134e4a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background-color: #0f172a; color: #f8fafc; }
+    .kanban-col { min-height: calc(100vh - 160px); }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #1e293b; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; border-radius: 3px; }
+  </style>
+</head>
+<body class="font-sans antialiased bg-slate-950 text-slate-100 flex flex-col min-h-screen">
+
+  <div id="app" class="flex flex-col flex-1">
+    
+    <!-- Top Header -->
+    <header class="bg-slate-900/80 backdrop-blur border-b border-slate-800 sticky top-0 z-30 px-6 py-4">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-500 to-indigo-500 flex items-center justify-center shadow-lg shadow-teal-500/20">
+            <i data-lucide="kanban-square" class="w-5 h-5 text-white"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="text-lg font-extrabold tracking-tight text-white">Editorial Calendar</h1>
+              <span class="px-2 py-0.5 text-[11px] font-mono font-bold bg-teal-500/10 text-teal-400 border border-teal-500/20 rounded-full">Quality Produce · VM</span>
+            </div>
+            <p class="text-xs text-slate-400">Visual story lifecycle, asset readiness, and distribution pipeline</p>
+          </div>
+        </div>
+
+        <!-- Filter Controls & Actions -->
+        <div class="flex items-center gap-3 flex-wrap">
+          
+          <!-- Pillar Filter -->
+          <select v-model="selectedPillar" class="bg-slate-800 border border-slate-700 text-xs font-semibold rounded-lg px-3 py-2 text-slate-200 focus:outline-none focus:border-teal-500">
+            <option value="">All Pillars</option>
+            <option value="Visual Quality (VQ)">Visual Quality (VQ)</option>
+            <option value="Product Release">Product Release</option>
+            <option value="Thought Leadership">Thought Leadership</option>
+            <option value="Customer Impact">Customer Impact</option>
+          </select>
+
+          <!-- Author Filter -->
+          <select v-model="selectedAuthor" class="bg-slate-800 border border-slate-700 text-xs font-semibold rounded-lg px-3 py-2 text-slate-200 focus:outline-none focus:border-teal-500">
+            <option value="">All Authors</option>
+            <option value="Christian Averill">Christian Averill</option>
+            <option value="Kat Eller Murray">Kat Eller Murray</option>
+            <option value="Jascha Kaykas-Wolff">Jascha Kaykas-Wolff</option>
+          </select>
+
+          <!-- New Post Button -->
+          <button @click="openNewModal" class="bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-2 shadow-lg shadow-teal-600/20 transition">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span>New Story</span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Main Kanban Board -->
+    <main class="flex-1 p-6 overflow-x-auto custom-scrollbar">
+      <div class="max-w-7xl mx-auto flex items-start gap-5 min-w-[1200px]">
+        
+        <!-- Columns Loop -->
+        <div v-for="col in columns" :key="col.id" class="flex-1 flex flex-col bg-slate-900/60 border border-slate-800/80 rounded-2xl p-4 shadow-sm">
+          
+          <!-- Column Header -->
+          <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full" :class="col.colorDot"></span>
+              <h2 class="text-xs font-bold uppercase tracking-wider text-slate-300 font-mono">{{ col.title }}</h2>
+            </div>
+            <span class="text-xs font-mono font-bold px-2 py-0.5 bg-slate-800 text-slate-400 rounded-md">
+              {{ getFilteredCards(col.id).length }}
+            </span>
+          </div>
+
+          <!-- Column Cards Container -->
+          <div class="flex-1 flex flex-col gap-3 min-h-[300px]">
+            
+            <div v-for="card in getFilteredCards(col.id)" :key="card.id" @click="openEditModal(card)"
+                 class="bg-slate-800/90 hover:bg-slate-800 border border-slate-700/70 hover:border-teal-500/50 rounded-xl p-4 cursor-pointer transition shadow-sm hover:shadow-md hover:shadow-slate-950/50 group">
+              
+              <!-- Card Top Badges -->
+              <div class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider" :class="getPillarClass(card.pillar)">
+                  {{ card.pillar }}
+                </span>
+                <span class="text-[11px] font-mono text-slate-400 font-medium">
+                  {{ card.targetDate }}
+                </span>
+              </div>
+
+              <!-- Card Title -->
+              <h3 class="text-sm font-bold text-white group-hover:text-teal-300 transition leading-snug mb-2">
+                {{ card.title }}
+              </h3>
+
+              <!-- Deck / Hook Preview -->
+              <p class="text-xs text-slate-400 line-clamp-2 mb-3 leading-relaxed">
+                {{ card.deck }}
+              </p>
+
+              <!-- Card Footer: Channel & Readiness Icons -->
+              <div class="flex items-center justify-between pt-2.5 border-t border-slate-700/50 text-xs">
+                
+                <!-- Channel Tag -->
+                <div class="flex items-center gap-1.5 text-slate-300 font-medium text-[11px]">
+                  <i data-lucide="share-2" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>{{ card.channel }}</span>
+                </div>
+
+                <!-- Asset Badges -->
+                <div class="flex items-center gap-2">
+                  <span title="Hero Graphic" :class="card.assets.graphic ? 'text-teal-400' : 'text-slate-600'">
+                    <i data-lucide="image" class="w-3.5 h-3.5"></i>
+                  </span>
+                  <span title="Quotes Verified" :class="card.assets.quotes ? 'text-teal-400' : 'text-slate-600'">
+                    <i data-lucide="quote" class="w-3.5 h-3.5"></i>
+                  </span>
+                  <span title="Metrics Grounded" :class="card.assets.metrics ? 'text-teal-400' : 'text-slate-600'">
+                    <i data-lucide="bar-chart-2" class="w-3.5 h-3.5"></i>
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Empty State Placeholder -->
+            <div v-if="getFilteredCards(col.id).length === 0" class="flex-1 flex flex-col items-center justify-center border-2 border-dashed border-slate-800 rounded-xl p-6 text-center text-slate-500">
+              <i data-lucide="inbox" class="w-6 h-6 mb-2 opacity-50"></i>
+              <p class="text-xs">No active stories</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Card Detail Modal -->
+    <div v-if="activeCard" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+      <div class="bg-slate-900 border border-slate-700 w-full max-w-2xl rounded-2xl p-6 shadow-2xl flex flex-col max-h-[90vh] overflow-hidden">
+        
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold px-2.5 py-1 rounded-md uppercase" :class="getPillarClass(activeCard.pillar)">
+              {{ activeCard.pillar }}
+            </span>
+            <span class="text-xs text-slate-400 font-mono">Stage: <strong>{{ getColTitle(activeCard.stage) }}</strong></span>
+          </div>
+          <button @click="activeCard = null" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="flex-1 overflow-y-auto py-5 space-y-4 custom-scrollbar pr-2">
+          
+          <div>
+            <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Working Headline</label>
+            <input v-model="activeCard.title" type="text" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white font-bold focus:outline-none focus:border-teal-500">
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Story Deck / Thesis Hook</label>
+            <textarea v-model="activeCard.deck" rows="3" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-teal-500 leading-relaxed"></textarea>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Stage</label>
+              <select v-model="activeCard.stage" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200">
+                <option v-for="c in columns" :key="c.id" :value="c.id">{{ c.title }}</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Author / Lead</label>
+              <input v-model="activeCard.author" type="text" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200">
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Target Date</label>
+              <input v-model="activeCard.targetDate" type="text" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200">
+            </div>
+          </div>
+
+          <!-- Asset Checklist -->
+          <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4">
+            <h4 class="text-xs font-mono font-bold uppercase text-slate-300 mb-3">Asset Readiness Gate</h4>
+            <div class="grid grid-cols-3 gap-3 text-xs">
+              <label class="flex items-center gap-2 text-slate-200 cursor-pointer">
+                <input type="checkbox" v-model="activeCard.assets.graphic" class="rounded bg-slate-700 border-slate-600 text-teal-600 focus:ring-0">
+                <span>Hero Graphic</span>
+              </label>
+              <label class="flex items-center gap-2 text-slate-200 cursor-pointer">
+                <input type="checkbox" v-model="activeCard.assets.quotes" class="rounded bg-slate-700 border-slate-600 text-teal-600 focus:ring-0">
+                <span>Verified Quotes</span>
+              </label>
+              <label class="flex items-center gap-2 text-slate-200 cursor-pointer">
+                <input type="checkbox" v-model="activeCard.assets.metrics" class="rounded bg-slate-700 border-slate-600 text-teal-600 focus:ring-0">
+                <span>Grounded Metrics</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+          <button @click="deleteCard(activeCard.id)" class="text-rose-400 hover:text-rose-300 text-xs font-semibold flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-rose-500/10">
+            <i data-lucide="trash-2" class="w-4 h-4"></i>
+            <span>Delete</span>
+          </button>
+          <div class="flex items-center gap-2">
+            <button @click="activeCard = null" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold px-4 py-2 rounded-lg">Cancel</button>
+            <button @click="saveCard" class="bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold px-5 py-2 rounded-lg shadow-lg shadow-teal-600/20">Save Changes</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const { createApp, ref, computed, nextTick } = Vue;
+
+    createApp({
+      setup() {
+        const columns = [
+          { id: 'backlog', title: 'Pitch Pool', colorDot: 'bg-slate-400' },
+          { id: 'outlining', title: 'Outlining & Angle', colorDot: 'bg-amber-400' },
+          { id: 'drafting', title: 'Drafting & Polish', colorDot: 'bg-blue-400' },
+          { id: 'review', title: 'Editorial Review', colorDot: 'bg-purple-400' },
+          { id: 'scheduled', title: 'Live & Distributed', colorDot: 'bg-teal-400' }
+        ];
+
+        const cards = ref([
+          {
+            id: '1',
+            title: 'Visual Quality (VQ) — Category Creation & Strategy Memo',
+            deck: 'Defining the 3-pillar diagnostic scoring model (Fidelity, Navigation, Staging) and 7-tier maturity ladder for spatial hospitality.',
+            pillar: 'Visual Quality (VQ)',
+            channel: 'Strategy / LinkedIn',
+            author: 'Christian Averill',
+            targetDate: 'Aug 26',
+            stage: 'review',
+            assets: { graphic: true, quotes: true, metrics: true }
+          },
+          {
+            id: '2',
+            title: 'Portfolio Showcase Map Clears Production for Enterprise Brands',
+            deck: 'Rollout of interactive multi-property 3D exploration map for Hyatt, Accor, and IHG portfolios.',
+            pillar: 'Product Release',
+            channel: 'Press / Blog',
+            author: 'Kat Eller Murray',
+            targetDate: 'Aug 25',
+            stage: 'scheduled',
+            assets: { graphic: true, quotes: true, metrics: true }
+          },
+          {
+            id: '3',
+            title: 'The Real Cost of Manual Operations in Modern Hospitality GTM',
+            deck: 'Analysis of how automated 3D digital twins collapse sales cycle friction for convention centers.',
+            pillar: 'Thought Leadership',
+            channel: 'Substack / Media',
+            author: 'Jascha Kaykas-Wolff',
+            targetDate: 'Sep 02',
+            stage: 'drafting',
+            assets: { graphic: true, quotes: false, metrics: true }
+          },
+          {
+            id: '4',
+            title: 'Case Study: Accelerating Inbound Demos Across 24 Sales Reps',
+            deck: 'How AI coaching and MEDDPICC framework alignment lifted High Velocity quota pacing by 34%.',
+            pillar: 'Customer Impact',
+            channel: 'Blog / LinkedIn',
+            author: 'Christian Averill',
+            targetDate: 'Sep 08',
+            stage: 'outlining',
+            assets: { graphic: false, quotes: true, metrics: false }
+          }
+        ]);
+
+        const selectedPillar = ref('');
+        const selectedAuthor = ref('');
+        const activeCard = ref(null);
+
+        const getFilteredCards = (colId) => {
+          return cards.value.filter(c => {
+            if (c.stage !== colId) return false;
+            if (selectedPillar.value && c.pillar !== selectedPillar.value) return false;
+            if (selectedAuthor.value && c.author !== selectedAuthor.value) return false;
+            return true;
+          });
+        };
+
+        const getPillarClass = (pillar) => {
+          switch(pillar) {
+            case 'Visual Quality (VQ)': return 'bg-amber-500/10 text-amber-400 border border-amber-500/20';
+            case 'Product Release': return 'bg-teal-500/10 text-teal-400 border border-teal-500/20';
+            case 'Thought Leadership': return 'bg-purple-500/10 text-purple-400 border border-purple-500/20';
+            case 'Customer Impact': return 'bg-blue-500/10 text-blue-400 border border-blue-500/20';
+            default: return 'bg-slate-700 text-slate-300';
+          }
+        };
+
+        const getColTitle = (colId) => {
+          const c = columns.find(x => x.id === colId);
+          return c ? c.title : colId;
+        };
+
+        const openEditModal = (card) => {
+          activeCard.value = JSON.parse(JSON.stringify(card));
+          nextTick(() => lucide.createIcons());
+        };
+
+        const openNewModal = () => {
+          activeCard.value = {
+            id: String(Date.now()),
+            title: 'New Story Angle',
+            deck: 'Outline core thesis and target audience hook...',
+            pillar: 'Visual Quality (VQ)',
+            channel: 'LinkedIn',
+            author: 'Christian Averill',
+            targetDate: 'Upcoming',
+            stage: 'backlog',
+            assets: { graphic: false, quotes: false, metrics: false }
+          };
+          nextTick(() => lucide.createIcons());
+        };
+
+        const saveCard = () => {
+          const idx = cards.value.findIndex(c => c.id === activeCard.value.id);
+          if (idx !== -1) {
+            cards.value[idx] = activeCard.value;
+          } else {
+            cards.value.push(activeCard.value);
+          }
+          activeCard.value = null;
+          nextTick(() => lucide.createIcons());
+        };
+
+        const deleteCard = (id) => {
+          cards.value = cards.value.filter(c => c.id !== id);
+          activeCard.value = null;
+          nextTick(() => lucide.createIcons());
+        };
+
+        nextTick(() => lucide.createIcons());
+
+        return {
+          columns,
+          cards,
+          selectedPillar,
+          selectedAuthor,
+          activeCard,
+          getFilteredCards,
+          getPillarClass,
+          getColTitle,
+          openEditModal,
+          openNewModal,
+          saveCard,
+          deleteCard
+        };
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
