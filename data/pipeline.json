@@ -1,5 +1,5 @@
 {
-  "last_sync": "2026-08-24T17:13:37.487534",
+  "last_sync": "2026-08-24T18:00:00.000000",
   "week": "2026-08-24",
   "cards": [
     {
@@ -9,6 +9,9 @@
       "pillar": "Product Release",
       "channel": "Press / Blog",
       "author": "Kat Eller Murray",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Kat Eller Murray",
+      "nextAction": "Approved for Distribution",
       "targetDate": "Aug 25",
       "stage": "scheduled",
       "assets": {
@@ -19,11 +22,14 @@
     },
     {
       "id": "story_vq_strategy",
-      "title": "Visual Quality (VQ) \u2014 Category Creation & Strategic Framework",
+      "title": "Visual Quality (VQ) — Category Creation & Strategic Framework",
       "deck": "Defining the 3-pillar diagnostic scoring model (Fidelity, Navigation, Staging) and 7-tier maturity ladder for spatial hospitality.",
       "pillar": "Visual Quality (VQ)",
       "channel": "Strategy / LinkedIn",
       "author": "Christian Averill",
+      "leadEditor": "Jascha Kaykas-Wolff",
+      "actionOwner": "Jascha Kaykas-Wolff",
+      "nextAction": "Awaiting Jascha Sign-Off",
       "targetDate": "Aug 26",
       "stage": "review",
       "assets": {
@@ -39,6 +45,9 @@
       "pillar": "Thought Leadership",
       "channel": "Substack / Media",
       "author": "Jascha Kaykas-Wolff",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Christian Averill",
+      "nextAction": "Review Draft & Share Edits",
       "targetDate": "Sep 02",
       "stage": "drafting",
       "assets": {
@@ -54,6 +63,9 @@
       "pillar": "Customer Impact",
       "channel": "Blog / LinkedIn",
       "author": "Christian Averill",
+      "leadEditor": "Kat Eller Murray",
+      "actionOwner": "Kat Eller Murray",
+      "nextAction": "Angle & Metric Sign-Off",
       "targetDate": "Sep 08",
       "stage": "outlining",
       "assets": {
@@ -69,6 +81,9 @@
       "pillar": "Thought Leadership",
       "channel": "LinkedIn / Technical Blog",
       "author": "Jascha Kaykas-Wolff",
+      "leadEditor": "Christian Averill",
+      "actionOwner": "Christian Averill",
+      "nextAction": "Backlog Angle Refinement",
       "targetDate": "Backlog",
       "stage": "backlog",
       "assets": {
