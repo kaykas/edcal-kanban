@@ -1,5 +1,5 @@
 {
-  "last_sync": "2026-08-26T15:30:00.000000",
+  "last_sync": "2026-08-26T16:00:00.000000",
   "week": "2026-08-24",
   "cards": [
     {
@@ -35,7 +35,8 @@
         "graphic": true,
         "quotes": false,
         "metrics": true
-      }
+      },
+      "visualAssetUrl": "https://visitingmedia.com/3d-portfolio-showcase"
     },
     {
       "id": "story-third-wave-distro",
@@ -69,7 +70,8 @@
         "graphic": true,
         "quotes": true,
         "metrics": true
-      }
+      },
+      "visualAssetUrl": "https://vmvirtualevents.lovable.app/assets/three-waves-distribution.png"
     },
     {
       "id": "story-google-agentic-booking",
@@ -104,7 +106,8 @@
         "graphic": true,
         "quotes": false,
         "metrics": true
-      }
+      },
+      "visualAssetUrl": "https://visitingmedia.com/research/google-ask-maps-agentic-diagram.png"
     },
     {
       "id": "story-death-of-keyword",
@@ -139,7 +142,8 @@
         "graphic": true,
         "quotes": true,
         "metrics": false
-      }
+      },
+      "visualAssetUrl": "https://visitingmedia.com/research/vector-search-vs-keywords.png"
     },
     {
       "id": "story-vq-strategy",
@@ -173,7 +177,8 @@
         "graphic": true,
         "quotes": true,
         "metrics": true
-      }
+      },
+      "visualAssetUrl": "https://visitingmedia.com/frameworks/vq-diagnostic-model.png"
     },
     {
       "id": "story-webinar-live",
@@ -209,7 +214,8 @@
         "graphic": true,
         "quotes": true,
         "metrics": true
-      }
+      },
+      "visualAssetUrl": "https://vmvirtualevents.lovable.app/webinar/09b22d7e-3ec4-40e5-baea-03a2a59a2e3d"
     },
     {
       "id": "story-content-as-infrastructure",
@@ -414,7 +420,8 @@
         "graphic": true,
         "quotes": false,
         "metrics": true
-      }
+      },
+      "visualAssetUrl": "https://visitingmedia.com/assets/story-how-llms-read-property"
     },
     {
       "id": "story-accor-fee-splits",
@@ -517,7 +524,8 @@
         "graphic": true,
         "quotes": true,
         "metrics": true
-      }
+      },
+      "visualAssetUrl": "https://visitingmedia.com/frameworks/multimodal-aeo-schema.png"
     },
     {
       "id": "story-activity-log-launch",
@@ -655,7 +663,8 @@
         "graphic": true,
         "quotes": true,
         "metrics": true
-      }
+      },
+      "visualAssetUrl": "https://visitingmedia.com/showcase/hilton-palacio-del-rio"
     },
     {
       "id": "story-canopy-nashville-gulch",
@@ -689,7 +698,8 @@
         "graphic": true,
         "quotes": false,
         "metrics": true
-      }
+      },
+      "visualAssetUrl": "https://visitingmedia.com/showcase/canopy-nashville-gulch"
     },
     {
       "id": "story-harness-loop-pattern",
@@ -757,7 +767,8 @@
         "graphic": false,
         "quotes": false,
         "metrics": true
-      }
+      },
+      "visualAssetUrl": "https://visitingmedia.com/team/andrew-batz-field-capture.jpg"
     },
     {
       "id": "story-bonafide-ai-accuracy",

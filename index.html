@@ -174,11 +174,33 @@
           <!-- Cards -->
           <div class="flex-1 flex flex-col gap-3 min-h-[300px]">
             
-            <div v-for="card in getFilteredCards(col.id)" :key="card.id" @click="openEditModal(card)"
-                 class="bg-slate-800/90 hover:bg-slate-800 border border-slate-700/70 hover:border-teal-500/50 rounded-xl p-4 cursor-pointer transition shadow-sm hover:shadow-md hover:shadow-slate-950/50 group flex flex-col justify-between">
+            <div v-for="(card, cardIdx) in getFilteredCards(col.id)" :key="card.id" @click="openEditModal(card)"
+                 class="bg-slate-800/90 hover:bg-slate-800 border border-slate-700/70 hover:border-teal-500/50 rounded-xl p-4 cursor-pointer transition shadow-sm hover:shadow-md hover:shadow-slate-950/50 group flex flex-col justify-between relative">
               
+              <!-- Card Priority Move Controls (Top Right Hover) -->
+              <div class="absolute top-2.5 right-2.5 flex items-center gap-0.5 bg-slate-950/80 border border-slate-700 rounded-md p-0.5 opacity-0 group-hover:opacity-100 transition z-10" @click.stop>
+                <button
+                  @click="movePriority(card.id, 'up')"
+                  :disabled="cardIdx === 0"
+                  :class="cardIdx === 0 ? 'text-slate-600 cursor-not-allowed' : 'text-slate-300 hover:text-white hover:bg-slate-800'"
+                  class="p-1 rounded"
+                  title="Move Priority Up (Top of Queue)"
+                >
+                  <i data-lucide="arrow-up" class="w-3 h-3"></i>
+                </button>
+                <button
+                  @click="movePriority(card.id, 'down')"
+                  :disabled="cardIdx === getFilteredCards(col.id).length - 1"
+                  :class="cardIdx === getFilteredCards(col.id).length - 1 ? 'text-slate-600 cursor-not-allowed' : 'text-slate-300 hover:text-white hover:bg-slate-800'"
+                  class="p-1 rounded"
+                  title="Move Priority Down"
+                >
+                  <i data-lucide="arrow-down" class="w-3 h-3"></i>
+                </button>
+              </div>
+
               <div>
-                <div class="flex items-center justify-between gap-2 mb-2.5">
+                <div class="flex items-center justify-between gap-2 mb-2.5 pr-14">
                   <span class="text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider" :class="getPillarClass(card.pillar)">
                     {{ card.pillar.split(':')[0] }}
                   </span>
@@ -195,15 +217,34 @@
                   {{ card.deck }}
                 </p>
 
-                <!-- Distribution Strip on Card -->
-                <div v-if="card.distribution" class="mb-2 px-2 py-1 bg-slate-950/60 border border-slate-700/50 rounded-md flex items-center justify-between gap-1 text-[10px]">
-                  <div class="flex items-center gap-1 min-w-0 truncate text-slate-300" :title="'Target Audience: ' + card.distribution.targetAudience">
-                    <i data-lucide="share-2" class="w-2.5 h-2.5 text-sky-400 shrink-0"></i>
-                    <span class="truncate">{{ card.distribution.targetAudience }}</span>
+                <!-- Distribution & Visual Asset Strip on Card -->
+                <div class="space-y-1.5 mb-2">
+                  <div v-if="card.distribution" class="px-2 py-1 bg-slate-950/60 border border-slate-700/50 rounded-md flex items-center justify-between gap-1 text-[10px]">
+                    <div class="flex items-center gap-1 min-w-0 truncate text-slate-300" :title="'Target Audience: ' + card.distribution.targetAudience">
+                      <i data-lucide="share-2" class="w-2.5 h-2.5 text-sky-400 shrink-0"></i>
+                      <span class="truncate">{{ card.distribution.targetAudience }}</span>
+                    </div>
+                    <span v-if="card.distribution.newsletterIncluded" class="px-1 py-0.2 bg-indigo-500/15 text-indigo-300 border border-indigo-500/30 rounded text-[8px] font-bold shrink-0">
+                      NL
+                    </span>
                   </div>
-                  <span v-if="card.distribution.newsletterIncluded" class="px-1 py-0.2 bg-indigo-500/15 text-indigo-300 border border-indigo-500/30 rounded text-[8px] font-bold shrink-0">
-                    NL
-                  </span>
+
+                  <!-- Visual Asset Direct Link Chip (if available) -->
+                  <div v-if="card.visualAssetUrl" class="flex items-center justify-between gap-1 px-2 py-1 bg-teal-950/40 border border-teal-800/50 rounded-md text-[10px]" @click.stop>
+                    <div class="flex items-center gap-1.5 text-teal-300 font-medium">
+                      <i data-lucide="image" class="w-3 h-3 text-teal-400 shrink-0"></i>
+                      <span>Visual Asset Ready</span>
+                    </div>
+                    <a
+                      :href="card.visualAssetUrl"
+                      target="_blank"
+                      class="inline-flex items-center gap-1 text-teal-400 hover:text-white font-bold bg-teal-900/60 hover:bg-teal-800 px-1.5 py-0.5 rounded transition"
+                      title="Open Visual Asset in new tab"
+                    >
+                      <span>View Asset</span>
+                      <i data-lucide="external-link" class="w-2.5 h-2.5"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -353,6 +394,33 @@
               <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Target Date</label>
               <input v-model="activeCard.targetDate" type="text" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200">
             </div>
+          </div>
+
+          <!-- VISUAL ASSET DEDICATED BLOCK IN MODAL -->
+          <div v-if="activeCard.visualAssetUrl" class="bg-slate-800/60 border border-teal-800/50 rounded-xl p-4 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <div class="p-2 bg-teal-950 border border-teal-800/60 rounded-lg text-teal-400">
+                <i data-lucide="image" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-[10px] font-mono uppercase text-teal-400 font-bold">Visual Asset Ready</div>
+                <div class="text-xs text-slate-200 font-medium truncate max-w-sm">{{ activeCard.visualAssetUrl }}</div>
+              </div>
+            </div>
+            <a
+              :href="activeCard.visualAssetUrl"
+              target="_blank"
+              class="px-3.5 py-2 bg-teal-600 hover:bg-teal-500 text-white rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-md shadow-teal-950/50 transition shrink-0"
+            >
+              <span>View Visual Asset</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <!-- Edit Visual Asset URL -->
+          <div>
+            <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Visual Asset / 3D Walkthrough URL</label>
+            <input v-model="activeCard.visualAssetUrl" type="url" placeholder="https://visitingmedia.com/3d-walkthrough or image link" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-teal-500">
           </div>
 
           <!-- Distribution Details in Modal -->
@@ -529,6 +597,31 @@
           });
         };
 
+        const movePriority = (cardId, direction) => {
+          const currentCard = cards.value.find(c => c.id === cardId);
+          if (!currentCard) return;
+          const stage = currentCard.stage;
+
+          const stageIndices = [];
+          cards.value.forEach((c, idx) => {
+            if (c.stage === stage) stageIndices.push(idx);
+          });
+
+          const posInStage = stageIndices.findIndex(idx => cards.value[idx].id === cardId);
+          if (posInStage === -1) return;
+
+          const targetPosInStage = direction === 'up' ? posInStage - 1 : posInStage + 1;
+          if (targetPosInStage < 0 || targetPosInStage >= stageIndices.length) return;
+
+          const fromGlobalIdx = stageIndices[posInStage];
+          const toGlobalIdx = stageIndices[targetPosInStage];
+
+          const temp = cards.value[fromGlobalIdx];
+          cards.value[fromGlobalIdx] = cards.value[toGlobalIdx];
+          cards.value[toGlobalIdx] = temp;
+          nextTick(() => lucide.createIcons());
+        };
+
         const getPillarClass = (pillar) => {
           if (!pillar) return 'bg-slate-700 text-slate-300';
           if (pillar.includes('Plane 1')) return 'bg-blue-500/10 text-blue-400 border border-blue-500/20';
@@ -621,6 +714,7 @@
             nextAction: 'Outline & Angle Review',
             targetDate: new Date().toISOString().split('T')[0],
             stage: 'backlog',
+            visualAssetUrl: '',
             distribution: {
               primaryChannel: 'Visiting Media Blog & LinkedIn',
               targetAudience: 'DOSMs, VP Sales, Portfolio Teams',
@@ -666,6 +760,7 @@
           loginWithGoogle,
           logout,
           getFilteredCards,
+          movePriority,
           getPillarClass,
           getColTitle,
           getInitials,
