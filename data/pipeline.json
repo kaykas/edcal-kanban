@@ -1,5 +1,5 @@
 {
-  "last_sync": "2026-08-26T16:00:00.000000",
+  "last_sync": "2026-08-26T16:30:00.000000",
   "week": "2026-08-24",
   "cards": [
     {
@@ -32,11 +32,11 @@
         "newsletterAudience": "Above-Property Hotel Commercial Leaders"
       },
       "assets": {
-        "graphic": true,
+        "graphic": false,
         "quotes": false,
         "metrics": true
       },
-      "visualAssetUrl": "https://visitingmedia.com/3d-portfolio-showcase"
+      "visualAssetUrl": ""
     },
     {
       "id": "story-third-wave-distro",
@@ -103,11 +103,11 @@
         "newsletterAudience": "Trade Press & Hotel C-Suite"
       },
       "assets": {
-        "graphic": true,
+        "graphic": false,
         "quotes": false,
         "metrics": true
       },
-      "visualAssetUrl": "https://visitingmedia.com/research/google-ask-maps-agentic-diagram.png"
+      "visualAssetUrl": ""
     },
     {
       "id": "story-death-of-keyword",
@@ -139,11 +139,11 @@
         "newsletterAudience": "Hospitality Marketers"
       },
       "assets": {
-        "graphic": true,
+        "graphic": false,
         "quotes": true,
         "metrics": false
       },
-      "visualAssetUrl": "https://visitingmedia.com/research/vector-search-vs-keywords.png"
+      "visualAssetUrl": ""
     },
     {
       "id": "story-vq-strategy",
@@ -174,11 +174,11 @@
         "newsletterAudience": "N/A"
       },
       "assets": {
-        "graphic": true,
+        "graphic": false,
         "quotes": true,
         "metrics": true
       },
-      "visualAssetUrl": "https://visitingmedia.com/frameworks/vq-diagnostic-model.png"
+      "visualAssetUrl": ""
     },
     {
       "id": "story-webinar-live",
@@ -417,11 +417,11 @@
         "newsletterAudience": "Tech & Innovation Readers"
       },
       "assets": {
-        "graphic": true,
+        "graphic": false,
         "quotes": false,
         "metrics": true
       },
-      "visualAssetUrl": "https://visitingmedia.com/assets/story-how-llms-read-property"
+      "visualAssetUrl": ""
     },
     {
       "id": "story-accor-fee-splits",
@@ -521,11 +521,11 @@
         "newsletterAudience": "Hospitality Digital Marketers"
       },
       "assets": {
-        "graphic": true,
+        "graphic": false,
         "quotes": true,
         "metrics": true
       },
-      "visualAssetUrl": "https://visitingmedia.com/frameworks/multimodal-aeo-schema.png"
+      "visualAssetUrl": ""
     },
     {
       "id": "story-activity-log-launch",
@@ -660,11 +660,11 @@
         "newsletterAudience": "Sales Prospects & Customers"
       },
       "assets": {
-        "graphic": true,
+        "graphic": false,
         "quotes": true,
         "metrics": true
       },
-      "visualAssetUrl": "https://visitingmedia.com/showcase/hilton-palacio-del-rio"
+      "visualAssetUrl": ""
     },
     {
       "id": "story-canopy-nashville-gulch",
@@ -695,11 +695,11 @@
         "newsletterAudience": "N/A"
       },
       "assets": {
-        "graphic": true,
+        "graphic": false,
         "quotes": false,
         "metrics": true
       },
-      "visualAssetUrl": "https://visitingmedia.com/showcase/canopy-nashville-gulch"
+      "visualAssetUrl": ""
     },
     {
       "id": "story-harness-loop-pattern",
@@ -768,7 +768,7 @@
         "quotes": false,
         "metrics": true
       },
-      "visualAssetUrl": "https://visitingmedia.com/team/andrew-batz-field-capture.jpg"
+      "visualAssetUrl": ""
     },
     {
       "id": "story-bonafide-ai-accuracy",
