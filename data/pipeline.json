@@ -1,55 +1,36 @@
 {
-  "last_sync": "2026-08-25T18:48:15.538616",
+  "last_sync": "2026-08-26T15:30:00.000000",
   "week": "2026-08-24",
   "cards": [
     {
-      "id": "story_showcase_map",
-      "title": "Portfolio Showcase Map Clears Production for Enterprise Brands",
-      "deck": "Rollout of interactive multi-property 3D exploration map for Hyatt, Accor, and IHG portfolios. GTM date confirmed Aug 24.",
-      "pillar": "Product Release",
-      "channel": "Press / Blog",
-      "author": "Kat Eller Murray",
+      "id": "story-hotel-portfolio-map",
+      "title": "Put Your Hotel Portfolio on the Map",
+      "deck": "Rollout of interactive multi-property 3D exploration maps for Hyatt, Accor, and IHG portfolios. VM corporate voice announcement for Showcase Maps.",
+      "pillar": "Plane 2: Customer Features & Launches",
+      "plane": 2,
+      "channel": "Blog, Linkedin, Newsletter",
+      "channels": [
+        "blog",
+        "linkedin",
+        "newsletter"
+      ],
+      "author": "Visiting Media",
+      "authorId": "vm",
       "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
       "actionOwner": "Kat Eller Murray",
-      "nextAction": "Approved for Distribution",
-      "targetDate": "Aug 25",
-      "stage": "scheduled",
-      "assets": {
-        "graphic": true,
-        "quotes": true,
-        "metrics": true
-      }
-    },
-    {
-      "id": "story_vq_strategy",
-      "title": "Visual Quality (VQ) \u2014 Category Creation & Strategic Framework",
-      "deck": "Defining the 3-pillar diagnostic scoring model (Fidelity, Navigation, Staging) and 7-tier maturity ladder for spatial hospitality.",
-      "pillar": "Visual Quality (VQ)",
-      "channel": "Strategy / LinkedIn",
-      "author": "Christian Averill",
-      "leadEditor": "Jascha Kaykas-Wolff",
-      "actionOwner": "Jascha Kaykas-Wolff",
-      "nextAction": "Awaiting Jascha Sign-Off",
-      "targetDate": "Aug 26",
+      "actionOwnerId": "kat",
+      "nextAction": "Awaiting Author Quote & Sign-Off",
+      "targetDate": "2026-08-28",
       "stage": "review",
-      "assets": {
-        "graphic": true,
-        "quotes": true,
-        "metrics": true
-      }
-    },
-    {
-      "id": "story_manual_ops",
-      "title": "The Real Cost of Manual Operations in Modern Hospitality GTM",
-      "deck": "Analysis of how automated 3D digital twins collapse sales cycle friction for convention centers.",
-      "pillar": "Thought Leadership",
-      "channel": "Substack / Media",
-      "author": "Jascha Kaykas-Wolff",
-      "leadEditor": "Christian Averill",
-      "actionOwner": "Christian Averill",
-      "nextAction": "Review Draft & Share Edits",
-      "targetDate": "Sep 02",
-      "stage": "drafting",
+      "googleDocUrl": "https://docs.google.com/document/d/12o19e1JCmSB6xviLcgNSx4zyYHWVd1L9oWvhlBYwJkY/edit",
+      "distribution": {
+        "primaryChannel": "Visiting Media Blog & Corporate LinkedIn",
+        "targetAudience": "DOSMs, VP Sales, Portfolio Sales Teams",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Above-Property Hotel Commercial Leaders"
+      },
       "assets": {
         "graphic": true,
         "quotes": false,
@@ -57,53 +38,68 @@
       }
     },
     {
-      "id": "story_sales_demo_velocity",
-      "title": "Case Study: Accelerating Inbound Demos Across 24 Sales Reps",
-      "deck": "How AI coaching and MEDDPICC framework alignment lifted High Velocity quota pacing by 34%.",
-      "pillar": "Customer Impact",
-      "channel": "Blog / LinkedIn",
-      "author": "Christian Averill",
-      "leadEditor": "Kat Eller Murray",
-      "actionOwner": "Kat Eller Murray",
-      "nextAction": "Angle & Metric Sign-Off",
-      "targetDate": "Sep 08",
-      "stage": "outlining",
-      "assets": {
-        "graphic": false,
-        "quotes": true,
-        "metrics": false
-      }
-    },
-    {
-      "id": "story_code_review",
-      "title": "Automated Code Review & AI Agent Governance in Production",
-      "deck": "Brief on HOLD pending Plane 1 slot decision. Architectural analysis of multi-agent verification gates.",
-      "pillar": "Thought Leadership",
-      "channel": "LinkedIn / Technical Blog",
+      "id": "story-third-wave-distro",
+      "title": "The Third Wave of Distribution Loss",
+      "deck": "Hotels lost pricing to OTAs in the 2000s, then discovery to Google in the 2010s. Now AI search is the third wave\u2014and without owning the data substrate, hotels risk becoming white-label inventory.",
+      "pillar": "Plane 4: Hospitality AI Gap & Market Insight",
+      "plane": 4,
+      "channel": "Linkedin, Blog",
+      "channels": [
+        "linkedin",
+        "blog"
+      ],
       "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
       "leadEditor": "Christian Averill",
-      "actionOwner": "Christian Averill",
-      "nextAction": "Backlog Angle Refinement",
-      "targetDate": "Backlog",
-      "stage": "backlog",
+      "leadEditorId": "christian",
+      "actionOwner": "Jascha Kaykas-Wolff",
+      "actionOwnerId": "jascha",
+      "nextAction": "Distribution Scheduled",
+      "targetDate": "2026-08-26",
+      "stage": "scheduled",
+      "googleDocUrl": "https://docs.google.com/document/d/1Sia46iLgqspJUsTGU9eaxoaYFhj_caWn_0ye1y-h9lE/edit",
+      "distribution": {
+        "primaryChannel": "Jascha LinkedIn & Visiting Media Blog",
+        "targetAudience": "Hotel GMs, VPs of Marketing & Distribution, Owners",
+        "distroOwner": "Jascha Kaykas-Wolff",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Hospitality Executive Audience"
+      },
       "assets": {
-        "graphic": false,
-        "quotes": false,
+        "graphic": true,
+        "quotes": true,
         "metrics": true
       }
     },
     {
-      "id": "story_google_agentic",
+      "id": "story-google-agentic-booking",
       "title": "Google Ask Maps & Agentic Booking: Hospitality's Distribution Shift",
       "deck": "Google is piloting Ask Maps and agentic booking flows directly in search results. When AI agents synthesize bookings directly, hotels that don't control their data layer lose brand margin.",
-      "pillar": "Thought Leadership",
-      "channel": "LinkedIn / Press",
+      "pillar": "Plane 4: Hospitality AI Gap & Market Insight",
+      "plane": 4,
+      "channel": "Linkedin, Press, Newsletter",
+      "channels": [
+        "linkedin",
+        "press",
+        "newsletter"
+      ],
       "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
       "leadEditor": "Christian Averill",
-      "actionOwner": "Jascha Kaykas-Wolff",
-      "nextAction": "Awaiting Author Review & Sign-Off",
-      "targetDate": "Backlog",
-      "stage": "backlog",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Review Draft & Share Edits",
+      "targetDate": "2026-08-30",
+      "stage": "drafting",
+      "googleDocUrl": "https://docs.google.com/document/d/13OrvYBV8OwaJT7P87uEWJdcQBf_LnOBsBDfuDeCtQ8w/edit",
+      "distribution": {
+        "primaryChannel": "LinkedIn Thought Leadership & Trade Press Pitch",
+        "targetAudience": "DOSMs, VP Sales, Portfolio Commercial Teams",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Trade Press & Hotel C-Suite"
+      },
       "assets": {
         "graphic": true,
         "quotes": false,
@@ -111,35 +107,309 @@
       }
     },
     {
-      "id": "story_diagramming_displacement",
-      "title": "Winning on Spatial Ground: How Diagramming Displaces Legacy Hospitality Tech",
-      "deck": "Analysis of high-velocity competitive displacements of Cvent/Social Tables across enterprise convention centers (Hilton Chicago, Drake, Palmer House).",
-      "pillar": "Customer Impact",
-      "channel": "Blog / LinkedIn",
-      "author": "Christian Averill",
-      "leadEditor": "Kat Eller Murray",
+      "id": "story-death-of-keyword",
+      "title": "The Death of the Keyword (When Search Becomes a Paragraph)",
+      "deck": "Keyword stuffing is obsolete when queries look like multi-variable natural language prompts. How LLMs parse intent vs keywords in generative search.",
+      "pillar": "Plane 4: Hospitality AI Gap & Market Insight",
+      "plane": 4,
+      "channel": "Linkedin, Blog, Newsletter",
+      "channels": [
+        "linkedin",
+        "blog",
+        "newsletter"
+      ],
+      "author": "Visiting Media",
+      "authorId": "vm",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
       "actionOwner": "Christian Averill",
-      "nextAction": "Byline & Deal Clearance Sign-Off",
-      "targetDate": "Backlog",
-      "stage": "backlog",
+      "actionOwnerId": "christian",
+      "nextAction": "Review Draft & Share Edits",
+      "targetDate": "2026-08-31",
+      "stage": "drafting",
+      "googleDocUrl": "https://docs.google.com/document/d/1Sia46iLgqspJUsTGU9eaxoaYFhj_caWn_0ye1y-h9lE/edit",
+      "distribution": {
+        "primaryChannel": "Visiting Media Blog & LinkedIn",
+        "targetAudience": "E-Commerce Directors, SEO Leads, Digital Agencies",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Hospitality Marketers"
+      },
       "assets": {
-        "graphic": false,
+        "graphic": true,
+        "quotes": true,
+        "metrics": false
+      }
+    },
+    {
+      "id": "story-vq-strategy",
+      "title": "Visual Quality (VQ) Strategy: Moving from Subjective Taste to an Engineering Standard",
+      "deck": "Defining the 3-pillar diagnostic scoring model (Fidelity, Navigation, Staging) and 7-tier maturity ladder for spatial hospitality assets.",
+      "pillar": "Plane 1: Internal Innovation",
+      "plane": 1,
+      "channel": "Linkedin, Blog",
+      "channels": [
+        "linkedin",
+        "blog"
+      ],
+      "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Jascha Kaykas-Wolff",
+      "actionOwnerId": "jascha",
+      "nextAction": "Awaiting Jascha Sign-Off",
+      "targetDate": "2026-09-01",
+      "stage": "review",
+      "googleDocUrl": "https://docs.google.com/document/d/1Sia46iLgqspJUsTGU9eaxoaYFhj_caWn_0ye1y-h9lE/edit",
+      "distribution": {
+        "primaryChannel": "Jascha LinkedIn & Technical Blog",
+        "targetAudience": "Asset Managers, Chief Commercial Officers, Brand CMOs",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": false,
+        "newsletterAudience": "N/A"
+      },
+      "assets": {
+        "graphic": true,
         "quotes": true,
         "metrics": true
       }
     },
     {
-      "id": "story_prismm_sunset",
+      "id": "story-webinar-live",
+      "title": "LIVE WEBINAR: The Three Waves of Distribution Loss",
+      "deck": "Live fireside conversation with Jascha Kaykas-Wolff (CEO, Visiting Media) and Fred Bean (CEO, HotelPORT) exploring data ownership and AI booking in 2026.",
+      "pillar": "Plane 3: Partnerships & Ecosystem",
+      "plane": 3,
+      "channel": "Webinar, Linkedin, Newsletter, Press",
+      "channels": [
+        "webinar",
+        "linkedin",
+        "newsletter",
+        "press"
+      ],
+      "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Kat Eller Murray",
+      "actionOwnerId": "kat",
+      "nextAction": "Webinar Promotion & Slide Lock",
+      "targetDate": "2026-09-02",
+      "stage": "scheduled",
+      "googleDocUrl": "https://vmvirtualevents.lovable.app/webinar/09b22d7e-3ec4-40e5-baea-03a2a59a2e3d",
+      "distribution": {
+        "primaryChannel": "Virtual Event Broadcast & Multi-Channel Blast",
+        "targetAudience": "Full Hospitality Industry, Media, Partners, C-Suite",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Full Subscriber Base (30k+)"
+      },
+      "assets": {
+        "graphic": true,
+        "quotes": true,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-content-as-infrastructure",
+      "title": "Content as Infrastructure: Moving Visual Media into the Core Data Layer",
+      "deck": "Most hospitality brands treat 3D walkthroughs and photos as disposable marketing campaign collateral. In the age of AI, spatial models and visual data are operational infrastructure.",
+      "pillar": "Plane 4: Hospitality AI Gap & Market Insight",
+      "plane": 4,
+      "channel": "Linkedin, Blog",
+      "channels": [
+        "linkedin",
+        "blog"
+      ],
+      "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Angle Sign-Off",
+      "targetDate": "2026-09-04",
+      "stage": "outlining",
+      "googleDocUrl": "https://docs.google.com/document/d/1Sia46iLgqspJUsTGU9eaxoaYFhj_caWn_0ye1y-h9lE/edit",
+      "distribution": {
+        "primaryChannel": "Jascha LinkedIn & Blog",
+        "targetAudience": "Asset Managers, Chief Commercial Officers",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Executive Newsletter"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": false
+      }
+    },
+    {
+      "id": "story-ai-readiness-checklist",
+      "title": "The Hoteliers AI-Readiness Checklist (5 Questions Leadership Must Ask Today)",
+      "deck": "A practical 5-point assessment for hotel owners and management companies to evaluate whether their digital assets and data layer are prepared for agentic search.",
+      "pillar": "Plane 4: Hospitality AI Gap & Market Insight",
+      "plane": 4,
+      "channel": "Blog, Newsletter, Linkedin",
+      "channels": [
+        "blog",
+        "newsletter",
+        "linkedin"
+      ],
+      "author": "Visiting Media",
+      "authorId": "vm",
+      "leadEditor": "Kat Eller Murray",
+      "leadEditorId": "kat",
+      "actionOwner": "Kat Eller Murray",
+      "actionOwnerId": "kat",
+      "nextAction": "Checklist Design & Graphic Assets",
+      "targetDate": "2026-09-06",
+      "stage": "outlining",
+      "googleDocUrl": "https://docs.google.com/document/d/1Sia46iLgqspJUsTGU9eaxoaYFhj_caWn_0ye1y-h9lE/edit",
+      "distribution": {
+        "primaryChannel": "Visiting Media Blog & Downloadable PDF Lead Magnet",
+        "targetAudience": "Hotel General Managers, Directors of Revenue & Marketing",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Entire Hospitality Email List"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-code-review",
+      "title": "Automated Code Review & AI Agent Governance in Production",
+      "deck": "How VM automated code review and multi-agent verification gates. Architectural analysis of multi-agent verification loops in continuous delivery.",
+      "pillar": "Plane 1: Internal Innovation",
+      "plane": 1,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Justin Kistner",
+      "authorId": "justin",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Plane 1 Slot Decision & Byline Confirmation",
+      "targetDate": "2026-09-08",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Technical Blog & LinkedIn",
+        "targetAudience": "Engineering Leaders, Strategics, Founders",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": false,
+        "newsletterAudience": "N/A"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-diagramming-displacement",
+      "title": "Winning on Spatial Ground: How Diagramming Displaces Legacy Tech",
+      "deck": "How interactive diagramming and 3D space configuration replace legacy static floorplan PDFs and won the Hilton Chicago trifecta.",
+      "pillar": "Plane 1: Internal Innovation",
+      "plane": 1,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Kyle Bruner",
+      "authorId": "kyle",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Byline & Quote Verification",
+      "targetDate": "2026-09-10",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Visiting Media Blog & LinkedIn",
+        "targetAudience": "Hotel Sales Leaders, Event Planners, Strategics",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Hospitality Sales Newsletter"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-prismm-sunset",
       "title": "Prismm Sunset & The Transition to Spatial Digital Twins",
-      "deck": "Prismm's sunset creates an urgent migration window for enterprise hotel event spaces. Why spatial digital twins offer a permanent data foundation.",
-      "pillar": "Thought Leadership",
-      "channel": "LinkedIn / Blog",
+      "deck": "Events tech market consolidation: why legacy diagramming tools are sunsetting and how spatial digital twins provide a future-proof foundation.",
+      "pillar": "Plane 4: Hospitality AI Gap & Market Insight",
+      "plane": 4,
+      "channel": "Linkedin, Press",
+      "channels": [
+        "linkedin",
+        "press"
+      ],
       "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
       "leadEditor": "Christian Averill",
-      "actionOwner": "Christian Averill",
-      "nextAction": "Author Quote Review",
-      "targetDate": "Backlog",
+      "leadEditorId": "christian",
+      "actionOwner": "Jascha Kaykas-Wolff",
+      "actionOwnerId": "jascha",
+      "nextAction": "Quote Review & Final Angle",
+      "targetDate": "2026-09-12",
       "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "LinkedIn Thought Leadership & Trade Press",
+        "targetAudience": "DOSMs, VP Sales, Events Managers",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Events & Meetings Community"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-how-llms-read-property",
+      "title": "How LLMs Read Your Property: Entities, Knowledge Graphs & Vector Embeddings",
+      "deck": "Technical explanation of how Large Language Models ingest hotel websites, map semantic relationships, and why traditional CMS pages fail to feed AI retrieval systems.",
+      "pillar": "Plane 4: Hospitality AI Gap & Market Insight",
+      "plane": 4,
+      "channel": "Linkedin, Blog",
+      "channels": [
+        "linkedin",
+        "blog"
+      ],
+      "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Review Draft & Graphics",
+      "targetDate": "2026-09-14",
+      "stage": "drafting",
+      "googleDocUrl": "https://docs.google.com/document/d/1Sia46iLgqspJUsTGU9eaxoaYFhj_caWn_0ye1y-h9lE/edit",
+      "distribution": {
+        "primaryChannel": "Jascha LinkedIn & Tech Blog",
+        "targetAudience": "Digital Agencies, Hospitality CIOs, Brand Marketing Directors",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Tech & Innovation Readers"
+      },
       "assets": {
         "graphic": true,
         "quotes": false,
@@ -147,17 +417,33 @@
       }
     },
     {
-      "id": "story_accor_fee_splits",
+      "id": "story-accor-fee-splits",
       "title": "Accor, OTAs, and the Shifting Economics of Brand Fee Splits",
-      "deck": "Examining brand fee splits and direct booking distribution in hospitality following major European hotel group shifts and OTA negotiations.",
-      "pillar": "Thought Leadership",
-      "channel": "LinkedIn / Media",
+      "deck": "Analysis of S\u00e9bastien Bazin's comments on OTA fee structures and how hotel brands must defend direct margins with owned digital assets.",
+      "pillar": "Plane 3: Partnerships & Ecosystem",
+      "plane": 3,
+      "channel": "Linkedin, Newsletter",
+      "channels": [
+        "linkedin",
+        "newsletter"
+      ],
       "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
       "leadEditor": "Christian Averill",
-      "actionOwner": "Jascha Kaykas-Wolff",
-      "nextAction": "Editorial Sign-Off",
-      "targetDate": "Backlog",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Awaiting Editorial Slot Selection",
+      "targetDate": "2026-09-15",
       "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Jascha LinkedIn & Hospitality Substack",
+        "targetAudience": "Above-Property Hotel Operators, Brand Portfolio Teams",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Hospitality Executives"
+      },
       "assets": {
         "graphic": false,
         "quotes": true,
@@ -165,89 +451,240 @@
       }
     },
     {
-      "id": "story_quarterly_recap_automation",
+      "id": "story-quarterly-recap-automation",
       "title": "Automating Quarterly Customer Recaps with AI & Engagement Telemetry",
-      "deck": "How automated quarterly engagement reporting turns passive CS interactions into active renewal and expansion drivers.",
-      "pillar": "Customer Impact",
-      "channel": "Blog / LinkedIn",
-      "author": "Christian Averill",
-      "leadEditor": "Kat Eller Murray",
-      "actionOwner": "Kat Eller Murray",
-      "nextAction": "Angle Review",
-      "targetDate": "Backlog",
+      "deck": "How CX Builders automated quarterly business reviews across 300+ enterprise hotel accounts using real-time TrueTour telemetry.",
+      "pillar": "Plane 1: Internal Innovation",
+      "plane": 1,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Kevin Huang",
+      "authorId": "kevin",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Author Approval of Draft Quote",
+      "targetDate": "2026-09-17",
       "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Visiting Media Blog & LinkedIn",
+        "targetAudience": "Customer Success Leaders, Strategics, Enterprise Accounts",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": false,
+        "newsletterAudience": "N/A"
+      },
       "assets": {
         "graphic": false,
-        "quotes": true,
+        "quotes": false,
         "metrics": true
       }
     },
     {
-      "id": "story_activity_log_launch",
-      "title": "Activity Log Launch: Real-Time Audit Trails for Spatial Assets",
-      "deck": "Enterprise property groups manage thousands of digital assets. Activity Log delivers full operational auditability and team permissions.",
-      "pillar": "Product Release",
-      "channel": "Press / Blog",
-      "author": "Kat Eller Murray",
-      "leadEditor": "Christian Averill",
-      "actionOwner": "Kat Eller Murray",
-      "nextAction": "Feature Overview Draft",
-      "targetDate": "Backlog",
-      "stage": "backlog",
-      "assets": {
-        "graphic": true,
-        "quotes": false,
-        "metrics": false
-      }
-    },
-    {
-      "id": "story_hotelport_content_layer",
-      "title": "Visiting Media & HotelPORT: The Verified Content Layer for Hospitality AI",
-      "deck": "Why verified spatial content and structured property metadata are essential prerequisites for AI travel search and conversational booking engines.",
-      "pillar": "Thought Leadership",
-      "channel": "LinkedIn / Press",
+      "id": "story-multimodal-aeo",
+      "title": "Multimodal AEO: Why Text Schema Is No Longer Enough",
+      "deck": "Generative search agents now evaluate images, 3D spatial models, and video alongside text. Why structured visual schema is required for AI visibility.",
+      "pillar": "Plane 4: Hospitality AI Gap & Market Insight",
+      "plane": 4,
+      "channel": "Linkedin, Blog, Press",
+      "channels": [
+        "linkedin",
+        "blog",
+        "press"
+      ],
       "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
       "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
       "actionOwner": "Jascha Kaykas-Wolff",
-      "nextAction": "Partnership Narrative Align",
-      "targetDate": "Backlog",
-      "stage": "backlog",
+      "actionOwnerId": "jascha",
+      "nextAction": "Final Proof & Sign-Off",
+      "targetDate": "2026-09-18",
+      "stage": "review",
+      "googleDocUrl": "https://docs.google.com/document/d/1Sia46iLgqspJUsTGU9eaxoaYFhj_caWn_0ye1y-h9lE/edit",
+      "distribution": {
+        "primaryChannel": "LinkedIn & Visiting Media Blog",
+        "targetAudience": "E-Commerce VPs, Digital Strategy Leads, Agency Executives",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Hospitality Digital Marketers"
+      },
       "assets": {
         "graphic": true,
         "quotes": true,
-        "metrics": false
+        "metrics": true
       }
     },
     {
-      "id": "story_hilton_palacio_del_rio",
+      "id": "story-activity-log-launch",
+      "title": "Activity Log Launch: Real-Time Audit Trails for Spatial Assets",
+      "deck": "Introducing real-time audit trails and change history for 3D digital twins across enterprise hotel portfolios.",
+      "pillar": "Plane 2: Customer Features & Launches",
+      "plane": 2,
+      "channel": "Blog, Newsletter",
+      "channels": [
+        "blog",
+        "newsletter"
+      ],
+      "author": "Rawan Serna",
+      "authorId": "rawan",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Kat Eller Murray",
+      "actionOwnerId": "kat",
+      "nextAction": "Feature Verification & Launch Timing",
+      "targetDate": "2026-09-19",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Visiting Media Blog & Product Newsletter",
+        "targetAudience": "Above-Property System Admins, Digital Asset Managers",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Product Updates List"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-spazious-diagramming-v2",
+      "title": "Spazious Diagramming V2: Real-Time Collaborative Space Planning",
+      "deck": "Next-generation 3D spatial meeting layout tools with instant capacity calculations and seating diagram generation.",
+      "pillar": "Plane 2: Customer Features & Launches",
+      "plane": 2,
+      "channel": "Blog, Newsletter, Linkedin",
+      "channels": [
+        "blog",
+        "newsletter",
+        "linkedin"
+      ],
+      "author": "Antonio Batanero Girbau (Bata)",
+      "authorId": "bata",
+      "leadEditor": "Kat Eller Murray",
+      "leadEditorId": "kat",
+      "actionOwner": "Kat Eller Murray",
+      "actionOwnerId": "kat",
+      "nextAction": "Product Launch Video Coordination",
+      "targetDate": "2026-09-20",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Visiting Media Blog & Product Newsletter",
+        "targetAudience": "Event Directors, Banquet Managers, Meeting Planners",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Meeting & Event Customers"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-hotelport-content-layer",
+      "title": "Visiting Media & HotelPORT: The Verified Content Layer for Hospitality AI",
+      "deck": "How Visiting Media and HotelPORT partner to supply verified spatial media and metadata directly to AI search and distribution channels.",
+      "pillar": "Plane 3: Partnerships & Ecosystem",
+      "plane": 3,
+      "channel": "Press, Linkedin, Blog",
+      "channels": [
+        "press",
+        "linkedin",
+        "blog"
+      ],
+      "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Jascha Kaykas-Wolff",
+      "actionOwnerId": "jascha",
+      "nextAction": "Co-Marketing PR Lock",
+      "targetDate": "2026-09-22",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Joint Wire Press Release & LinkedIn",
+        "targetAudience": "Brand Distribution Heads, OTAs, Tech Partners",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Partner & Customer Base"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-hilton-palacio-del-rio",
       "title": "Customer Showcase: Hilton Palacio del Rio Deploys Spatial Digital Twins",
-      "deck": "San Antonio landmark hotel adopts full 3D spatial presentation across River Walk event venues and guest rooms, driving immediate group planner engagement.",
-      "pillar": "Customer Impact",
-      "channel": "Blog / Press",
-      "author": "Kat Eller Murray",
-      "leadEditor": "Christian Averill",
+      "deck": "How Hilton Palacio del Rio uses immersive 3D walkthroughs to accelerate group sales and event bookings on the San Antonio River Walk.",
+      "pillar": "Customer Showcase & Case Studies",
+      "plane": null,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Visiting Media",
+      "authorId": "vm",
+      "leadEditor": "Kat Eller Murray",
+      "leadEditorId": "kat",
       "actionOwner": "Kat Eller Murray",
-      "nextAction": "Customer Rights Clearance",
-      "targetDate": "Backlog",
-      "stage": "backlog",
+      "actionOwnerId": "kat",
+      "nextAction": "Customer Quote Clearance",
+      "targetDate": "2026-09-24",
+      "stage": "scheduled",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Visiting Media Case Study Hub & LinkedIn",
+        "targetAudience": "Hotel GMs, Event Planners, DOSMs",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Sales Prospects & Customers"
+      },
       "assets": {
         "graphic": true,
-        "quotes": false,
+        "quotes": true,
         "metrics": true
       }
     },
     {
-      "id": "story_canopy_nashville_gulch",
+      "id": "story-canopy-nashville-gulch",
       "title": "Customer Showcase: Canopy by Hilton Nashville The Gulch",
-      "deck": "Lifestyle property launches TrueTour immersive experiences to showcase boutique meeting spaces and urban guest rooms to luxury travelers and event planners.",
-      "pillar": "Customer Impact",
-      "channel": "Blog / Press",
-      "author": "Kat Eller Murray",
-      "leadEditor": "Christian Averill",
+      "deck": "Showcasing boutique lifestyle spaces and meeting rooms through high-fidelity immersive digital twins.",
+      "pillar": "Customer Showcase & Case Studies",
+      "plane": null,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Visiting Media",
+      "authorId": "vm",
+      "leadEditor": "Kat Eller Murray",
+      "leadEditorId": "kat",
       "actionOwner": "Kat Eller Murray",
-      "nextAction": "Customer Rights Clearance",
-      "targetDate": "Backlog",
+      "actionOwnerId": "kat",
+      "nextAction": "Asset Assembly & Clearance",
+      "targetDate": "2026-09-26",
       "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Visiting Media Case Study Hub",
+        "targetAudience": "Boutique Hotel Operators, Lifestyle Brands",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": false,
+        "newsletterAudience": "N/A"
+      },
       "assets": {
         "graphic": true,
         "quotes": false,
@@ -255,17 +692,33 @@
       }
     },
     {
-      "id": "story_harness_loop_pattern",
+      "id": "story-harness-loop-pattern",
       "title": "The Harness-Loop Pattern: Resilient AI Workflows in Production",
-      "deck": "Building deterministic self-healing loops and verification harnesses for production agent systems without human babysitting.",
-      "pillar": "Thought Leadership",
-      "channel": "LinkedIn / Technical Blog",
-      "author": "Jascha Kaykas-Wolff",
+      "deck": "How VM structures autonomous AI agents and verification loops to prevent drift and ensure deterministic outcomes in production.",
+      "pillar": "Plane 1: Internal Innovation",
+      "plane": 1,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Eric Sniff",
+      "authorId": "eric",
       "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
       "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
       "nextAction": "Technical Accuracy Review",
-      "targetDate": "Backlog",
+      "targetDate": "2026-09-28",
       "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Engineering Blog & Personal LinkedIn",
+        "targetAudience": "AI Engineers, CTOs, Strategics",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": false,
+        "newsletterAudience": "N/A"
+      },
       "assets": {
         "graphic": false,
         "quotes": false,
@@ -273,38 +726,310 @@
       }
     },
     {
-      "id": "story_batz_spotlight",
+      "id": "story-batz-spotlight",
       "title": "Behind the Lens: Scaling Global 3D Spatial Capture Operations",
-      "deck": "Spotlight on how field operations and 3D capture teams maintain millimeter-accurate spatial fidelity across thousands of properties globally.",
-      "pillar": "Visual Quality (VQ)",
-      "channel": "Blog / LinkedIn",
-      "author": "Kat Eller Murray",
-      "leadEditor": "Christian Averill",
+      "deck": "Meet Andrew Batz: how Visiting Media coordinates photographers and capture specialists worldwide to digitize millions of square feet.",
+      "pillar": "Plane 5: Employee Spotlights & Culture",
+      "plane": 5,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Andrew Batz",
+      "authorId": "batz",
+      "leadEditor": "Kat Eller Murray",
+      "leadEditorId": "kat",
       "actionOwner": "Kat Eller Murray",
-      "nextAction": "Interview & Quote Sourcing",
-      "targetDate": "Backlog",
+      "actionOwnerId": "kat",
+      "nextAction": "Interview Transcription & Photo Selection",
+      "targetDate": "2026-09-30",
       "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Visiting Media Careers & Corporate LinkedIn",
+        "targetAudience": "Hospitality Industry, Creators, Prospective Talent",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Community & Team Newsletter"
+      },
       "assets": {
-        "graphic": true,
+        "graphic": false,
         "quotes": false,
-        "metrics": false
+        "metrics": true
       }
     },
     {
-      "id": "story_bonafide_ai_accuracy",
+      "id": "story-bonafide-ai-accuracy",
       "title": "1 in 3 AI Answers About Hotels Are Wrong: The Spatial Truth Defense",
-      "deck": "Webinar data reveals that 33% of generative AI hotel answers contain factual errors. How verified spatial data sources solve the LLM hallucination gap.",
-      "pillar": "Visual Quality (VQ)",
-      "channel": "LinkedIn / Blog",
+      "deck": "Evaluating hallucination rates across LLM search engines and why verified 3D data layers are the only cure for incorrect hotel information.",
+      "pillar": "Plane 4: Hospitality AI Gap & Market Insight",
+      "plane": 4,
+      "channel": "Linkedin, Press, Newsletter",
+      "channels": [
+        "linkedin",
+        "press",
+        "newsletter"
+      ],
       "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
       "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
       "actionOwner": "Christian Averill",
-      "nextAction": "Data Synthesis & Outline",
-      "targetDate": "Backlog",
+      "actionOwnerId": "christian",
+      "nextAction": "Data Verification & Fact Check",
+      "targetDate": "2026-10-02",
       "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Jascha LinkedIn & Skift/PhocusWire Pitch",
+        "targetAudience": "Hotel Brand Marketers, C-Suite, Industry Press",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Executive Comms List"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-defense-in-depth",
+      "title": "We Ship at 52% Confidence: Here Is What Makes That Safe",
+      "deck": "How defense-in-depth architectural gates and automated rollback tripwires allow engineering to deploy hundreds of commits weekly with zero downtime.",
+      "pillar": "Plane 1: Internal Innovation",
+      "plane": 1,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Andrew Batz",
+      "authorId": "batz",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Byline Finalization",
+      "targetDate": "2026-10-05",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Engineering Blog & LinkedIn",
+        "targetAudience": "Tech Leaders, Cloud Architects, Investors",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": false,
+        "newsletterAudience": "N/A"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-showcase-buyer-signal",
+      "title": "The Buyer Signal Your Showcase Is Already Producing",
+      "deck": "How enterprise event planners interact with 3D showcases and how heatmaps reveal high-intent booking signals before a RFP is submitted.",
+      "pillar": "Plane 2: Customer Features & Launches",
+      "plane": 2,
+      "channel": "Blog, Linkedin, Newsletter",
+      "channels": [
+        "blog",
+        "linkedin",
+        "newsletter"
+      ],
+      "author": "Laura Thornton",
+      "authorId": "laura",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Author Quote Review",
+      "targetDate": "2026-10-08",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Visiting Media Blog & Product Newsletter",
+        "targetAudience": "Enterprise DOSMs, Event Sales Managers",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": true,
+        "newsletterAudience": "Enterprise Customers"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-72-hour-build",
+      "title": "What a 72-Hour Product Build Actually Looks Like",
+      "deck": "Behind the scenes of rebuilding TrueTour's 360 in-app preview engine in 72 hours from concept to live production across 3,000+ customer sites.",
+      "pillar": "Plane 2: Customer Features & Launches",
+      "plane": 2,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Eric Sniff",
+      "authorId": "eric",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Draft Outline Review",
+      "targetDate": "2026-10-10",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Engineering Blog & LinkedIn",
+        "targetAudience": "Product & Engineering Peers, Strategics",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": false,
+        "newsletterAudience": "N/A"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-partner-api-readiness",
+      "title": "The Invisible Work of Making an API Actually Partner-Ready",
+      "deck": "Why public API endpoints are only 20% of the work: rate limiting, webhook reliability, and automated contract testing for hospitality ecosystems.",
+      "pillar": "Plane 3: Partnerships & Ecosystem",
+      "plane": 3,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Eric Sniff",
+      "authorId": "eric",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Partner NDA Check & Technical Review",
+      "targetDate": "2026-10-12",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Visiting Media Developer Portal & LinkedIn",
+        "targetAudience": "Integration Partners, Hotel Tech Vendors, CTOs",
+        "distroOwner": "Kat Eller Murray",
+        "newsletterIncluded": false,
+        "newsletterAudience": "N/A"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-cx-business-driver",
+      "title": "CX Is the Business Driver Now: The Compounding Customer Loop",
+      "deck": "Transforming customer support from a cost center into a retention and expansion engine through telemetry-driven account health scoring.",
+      "pillar": "Plane 1: Internal Innovation",
+      "plane": 1,
+      "channel": "Linkedin, Blog",
+      "channels": [
+        "linkedin",
+        "blog"
+      ],
+      "author": "Jascha Kaykas-Wolff",
+      "authorId": "jascha",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Jascha Kaykas-Wolff",
+      "actionOwnerId": "jascha",
+      "nextAction": "Executive Review",
+      "targetDate": "2026-10-15",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Jascha LinkedIn & Executive Digest",
+        "targetAudience": "SaaS Founders, Commercial Leaders, Investors",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": true,
+        "newsletterAudience": "SaaS GTM Newsletter"
+      },
       "assets": {
         "graphic": false,
         "quotes": true,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-cloudflare-migration",
+      "title": "Zero-Downtime Edge Migration: Moving 3,000+ Enterprise Hospitality Portals",
+      "deck": "How engineering migrated global CDN caching and DNS routing to Cloudflare with zero customer interruption.",
+      "pillar": "Plane 1: Internal Innovation",
+      "plane": 1,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Daniel Nalborczyk",
+      "authorId": "daniel",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Engineering Byline Review",
+      "targetDate": "2026-10-18",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Technical Blog & LinkedIn",
+        "targetAudience": "Cloud Engineers, Infrastructure Leads",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": false,
+        "newsletterAudience": "N/A"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
+        "metrics": true
+      }
+    },
+    {
+      "id": "story-cycle-time-forecasting",
+      "title": "From Story Points to Cycle Time: Engineering Forecasting with Probabilistic Modeling",
+      "deck": "How our engineering organization transitioned from arbitrary velocity estimates to Monte Carlo lead-time predictions.",
+      "pillar": "Plane 1: Internal Innovation",
+      "plane": 1,
+      "channel": "Blog, Linkedin",
+      "channels": [
+        "blog",
+        "linkedin"
+      ],
+      "author": "Eric Sniff",
+      "authorId": "eric",
+      "leadEditor": "Christian Averill",
+      "leadEditorId": "christian",
+      "actionOwner": "Christian Averill",
+      "actionOwnerId": "christian",
+      "nextAction": "Drafting & Data Verification",
+      "targetDate": "2026-10-22",
+      "stage": "backlog",
+      "googleDocUrl": "https://github.com/kaykas/qp-comms",
+      "distribution": {
+        "primaryChannel": "Engineering Blog & LinkedIn",
+        "targetAudience": "Engineering Managers, VPs of Engineering",
+        "distroOwner": "Christian Averill",
+        "newsletterIncluded": false,
+        "newsletterAudience": "N/A"
+      },
+      "assets": {
+        "graphic": false,
+        "quotes": false,
         "metrics": true
       }
     }

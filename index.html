@@ -46,7 +46,7 @@
 
         <h2 class="text-xl font-extrabold text-white mb-2">Visiting Media QP-COMMS</h2>
         <p class="text-xs text-slate-400 mb-6 leading-relaxed">
-          Internal Editorial Calendar & Strategy Pipeline. Please authenticate with your authorized Visiting Media account to access story drafts and embargo dates.
+          Internal Editorial Calendar &amp; Strategy Pipeline. Please authenticate with your authorized Visiting Media account to access story drafts and embargo dates.
         </p>
 
         <div class="space-y-3">
@@ -90,21 +90,45 @@
         <!-- Filter Controls & User Badge -->
         <div class="flex items-center gap-3 flex-wrap">
           
+          <!-- Content Planes Filter -->
           <select v-model="selectedPillar" class="bg-slate-800 border border-slate-700 text-xs font-semibold rounded-lg px-3 py-2 text-slate-200 focus:outline-none focus:border-teal-500">
-            <option value="">All Pillars</option>
-            <option value="Visual Quality (VQ)">Visual Quality (VQ)</option>
-            <option value="Product Release">Product Release</option>
-            <option value="Thought Leadership">Thought Leadership</option>
-            <option value="Customer Impact">Customer Impact</option>
+            <option value="">All Content Planes</option>
+            <option value="Plane 1: Internal Innovation">Plane 1: Internal Innovation</option>
+            <option value="Plane 2: Customer Features & Launches">Plane 2: Customer Features</option>
+            <option value="Plane 3: Partnerships & Ecosystem">Plane 3: Partnerships</option>
+            <option value="Plane 4: Hospitality AI Gap & Market Insight">Plane 4: Hospitality AI Gap</option>
+            <option value="Plane 5: Employee Spotlights & Culture">Plane 5: Employee Spotlights</option>
+            <option value="Customer Showcase & Case Studies">Customer Showcases</option>
           </select>
 
+          <!-- Authors Filter -->
           <select v-model="selectedAuthor" class="bg-slate-800 border border-slate-700 text-xs font-semibold rounded-lg px-3 py-2 text-slate-200 focus:outline-none focus:border-teal-500">
             <option value="">All Authors</option>
-            <option value="Christian Averill">Christian Averill</option>
-            <option value="Kat Eller Murray">Kat Eller Murray</option>
+            <option value="Visiting Media">Visiting Media (Corporate Voice)</option>
             <option value="Jascha Kaykas-Wolff">Jascha Kaykas-Wolff</option>
+            <option value="Chad Kimner">Chad Kimner</option>
+            <option value="Eric Sniff">Eric Sniff</option>
+            <option value="Kevin Huang">Kevin Huang</option>
+            <option value="Laura Thornton">Laura Thornton</option>
+            <option value="Rawan Serna">Rawan Serna</option>
+            <option value="Andrew Batz">Andrew Batz</option>
+            <option value="Daniel Nalborczyk">Daniel Nalborczyk</option>
+            <option value="Justin Kistner">Justin Kistner</option>
+            <option value="Michael Chamerski">Michael Chamerski</option>
+            <option value="Kyle Bruner">Kyle Bruner</option>
+            <option value="Antonio Batanero Girbau (Bata)">Antonio Batanero Girbau</option>
+            <option value="Fred Bean">Fred Bean (HotelPORT)</option>
           </select>
 
+          <!-- Editors Filter -->
+          <select v-model="selectedEditor" class="bg-slate-800 border border-slate-700 text-xs font-semibold rounded-lg px-3 py-2 text-slate-200 focus:outline-none focus:border-teal-500">
+            <option value="">All Editors</option>
+            <option value="Christian Averill">Ed: Christian Averill</option>
+            <option value="Kat Eller Murray">Ed: Kat Eller Murray</option>
+            <option value="Jascha Kaykas-Wolff">Ed: Jascha Kaykas-Wolff</option>
+          </select>
+
+          <!-- Action Owners Filter -->
           <select v-model="selectedActionOwner" class="bg-slate-800 border border-slate-700 text-xs font-semibold rounded-lg px-3 py-2 text-slate-200 focus:outline-none focus:border-teal-500">
             <option value="">All Action Owners</option>
             <option value="Christian Averill">Next: Christian Averill</option>
@@ -156,7 +180,7 @@
               <div>
                 <div class="flex items-center justify-between gap-2 mb-2.5">
                   <span class="text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider" :class="getPillarClass(card.pillar)">
-                    {{ card.pillar }}
+                    {{ card.pillar.split(':')[0] }}
                   </span>
                   <span class="text-[11px] font-mono text-slate-400 font-medium">
                     {{ card.targetDate }}
@@ -167,9 +191,20 @@
                   {{ card.title }}
                 </h3>
 
-                <p class="text-xs text-slate-400 line-clamp-2 mb-3 leading-relaxed">
+                <p class="text-xs text-slate-400 line-clamp-2 mb-2.5 leading-relaxed">
                   {{ card.deck }}
                 </p>
+
+                <!-- Distribution Strip on Card -->
+                <div v-if="card.distribution" class="mb-2 px-2 py-1 bg-slate-950/60 border border-slate-700/50 rounded-md flex items-center justify-between gap-1 text-[10px]">
+                  <div class="flex items-center gap-1 min-w-0 truncate text-slate-300" :title="'Target Audience: ' + card.distribution.targetAudience">
+                    <i data-lucide="share-2" class="w-2.5 h-2.5 text-sky-400 shrink-0"></i>
+                    <span class="truncate">{{ card.distribution.targetAudience }}</span>
+                  </div>
+                  <span v-if="card.distribution.newsletterIncluded" class="px-1 py-0.2 bg-indigo-500/15 text-indigo-300 border border-indigo-500/30 rounded text-[8px] font-bold shrink-0">
+                    NL
+                  </span>
+                </div>
               </div>
 
               <!-- DEDICATED STORY OWNERSHIP & NEXT REVIEW/APPROVAL ELEMENT -->
@@ -178,8 +213,8 @@
                 <!-- Story Lead Author & Lead Editor Row -->
                 <div class="flex items-center justify-between gap-2 text-xs">
                   <!-- Author / Byline -->
-                  <div class="flex items-center gap-1.5 min-w-0" :title="'Author: ' + (card.author || 'Unassigned')">
-                    <span class="w-5 h-5 rounded-full bg-slate-700 text-teal-300 border border-slate-600 flex items-center justify-center text-[9px] font-bold font-mono shrink-0 shadow-sm">
+                  <div class="flex items-center gap-1.5 min-w-0" :title="'Byline Author: ' + (card.author || 'Unassigned')">
+                    <span class="w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-bold font-mono shrink-0 shadow-sm" :class="card.author === 'Visiting Media' ? 'bg-indigo-900/80 text-indigo-300 border border-indigo-700/60' : 'bg-slate-700 text-teal-300 border border-slate-600'">
                       {{ getInitials(card.author) }}
                     </span>
                     <span class="text-slate-200 font-semibold text-[11px] truncate">{{ card.author || 'Unassigned' }}</span>
@@ -269,11 +304,22 @@
             </div>
 
             <div>
-              <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Lead Author / Byline</label>
+              <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Byline Author</label>
               <select v-model="activeCard.author" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200">
-                <option value="Christian Averill">Christian Averill</option>
-                <option value="Kat Eller Murray">Kat Eller Murray</option>
+                <option value="Visiting Media">Visiting Media (Corporate Voice)</option>
                 <option value="Jascha Kaykas-Wolff">Jascha Kaykas-Wolff</option>
+                <option value="Chad Kimner">Chad Kimner</option>
+                <option value="Eric Sniff">Eric Sniff</option>
+                <option value="Kevin Huang">Kevin Huang</option>
+                <option value="Laura Thornton">Laura Thornton</option>
+                <option value="Rawan Serna">Rawan Serna</option>
+                <option value="Andrew Batz">Andrew Batz</option>
+                <option value="Daniel Nalborczyk">Daniel Nalborczyk</option>
+                <option value="Justin Kistner">Justin Kistner</option>
+                <option value="Michael Chamerski">Michael Chamerski</option>
+                <option value="Kyle Bruner">Kyle Bruner</option>
+                <option value="Antonio Batanero Girbau (Bata)">Antonio Batanero Girbau</option>
+                <option value="Fred Bean">Fred Bean (HotelPORT)</option>
               </select>
             </div>
 
@@ -307,6 +353,44 @@
               <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Target Date</label>
               <input v-model="activeCard.targetDate" type="text" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200">
             </div>
+          </div>
+
+          <!-- Distribution Details in Modal -->
+          <div v-if="activeCard.distribution" class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4 space-y-2">
+            <h4 class="text-xs font-mono font-bold uppercase text-sky-400 flex items-center gap-1.5">
+              <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+              <span>Distribution Strategy &amp; Channels</span>
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+              <div>
+                <span class="text-slate-400 font-mono text-[10px] block">PRIMARY CHANNELS</span>
+                <span class="text-white font-medium">{{ activeCard.distribution.primaryChannel }}</span>
+              </div>
+              <div>
+                <span class="text-slate-400 font-mono text-[10px] block">TARGET AUDIENCE</span>
+                <span class="text-white font-medium">{{ activeCard.distribution.targetAudience }}</span>
+              </div>
+              <div>
+                <span class="text-slate-400 font-mono text-[10px] block">DISTRIBUTION OWNER</span>
+                <span class="text-white font-medium">{{ activeCard.distribution.distroOwner }}</span>
+              </div>
+              <div>
+                <span class="text-slate-400 font-mono text-[10px] block">NEWSLETTER STATUS</span>
+                <span class="text-white font-medium">{{ activeCard.distribution.newsletterIncluded ? 'Included in ' + activeCard.distribution.newsletterAudience : 'Not in newsletter' }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Doc Link -->
+          <div v-if="activeCard.googleDocUrl">
+            <label class="block text-xs font-mono font-bold uppercase text-slate-400 mb-1">Working Google Doc / Brief</label>
+            <a :href="activeCard.googleDocUrl" target="_blank" class="flex items-center justify-between p-3 bg-teal-950/40 border border-teal-800/40 hover:border-teal-500 rounded-xl text-xs text-teal-300 transition">
+              <div class="flex items-center gap-2">
+                <i data-lucide="file-text" class="w-4 h-4 text-teal-400"></i>
+                <span class="font-semibold underline underline-offset-2">Open Working Document</span>
+              </div>
+              <i data-lucide="external-link" class="w-4 h-4 text-teal-400"></i>
+            </a>
           </div>
 
           <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4">
@@ -430,6 +514,7 @@
 
         const selectedPillar = ref('');
         const selectedAuthor = ref('');
+        const selectedEditor = ref('');
         const selectedActionOwner = ref('');
         const activeCard = ref(null);
 
@@ -438,19 +523,21 @@
             if (c.stage !== colId) return false;
             if (selectedPillar.value && c.pillar !== selectedPillar.value) return false;
             if (selectedAuthor.value && c.author !== selectedAuthor.value) return false;
+            if (selectedEditor.value && c.leadEditor !== selectedEditor.value) return false;
             if (selectedActionOwner.value && c.actionOwner !== selectedActionOwner.value) return false;
             return true;
           });
         };
 
         const getPillarClass = (pillar) => {
-          switch(pillar) {
-            case 'Visual Quality (VQ)': return 'bg-amber-500/10 text-amber-400 border border-amber-500/20';
-            case 'Product Release': return 'bg-teal-500/10 text-teal-400 border border-teal-500/20';
-            case 'Thought Leadership': return 'bg-purple-500/10 text-purple-400 border border-purple-500/20';
-            case 'Customer Impact': return 'bg-blue-500/10 text-blue-400 border border-blue-500/20';
-            default: return 'bg-slate-700 text-slate-300';
-          }
+          if (!pillar) return 'bg-slate-700 text-slate-300';
+          if (pillar.includes('Plane 1')) return 'bg-blue-500/10 text-blue-400 border border-blue-500/20';
+          if (pillar.includes('Plane 2')) return 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
+          if (pillar.includes('Plane 3')) return 'bg-purple-500/10 text-purple-400 border border-purple-500/20';
+          if (pillar.includes('Plane 4')) return 'bg-amber-500/10 text-amber-400 border border-amber-500/20';
+          if (pillar.includes('Plane 5')) return 'bg-pink-500/10 text-pink-400 border border-pink-500/20';
+          if (pillar.includes('Case Studies') || pillar.includes('Showcase')) return 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20';
+          return 'bg-slate-700 text-slate-300';
         };
 
         const getColTitle = (colId) => {
@@ -460,9 +547,22 @@
 
         const getInitials = (name) => {
           if (!name) return '??';
+          if (name === 'Visiting Media') return 'VM';
           if (name.includes('Jascha')) return 'JKW';
           if (name.includes('Christian')) return 'CA';
           if (name.includes('Kat')) return 'KM';
+          if (name.includes('Chad')) return 'CK';
+          if (name.includes('Eric')) return 'ES';
+          if (name.includes('Kevin')) return 'KH';
+          if (name.includes('Laura')) return 'LT';
+          if (name.includes('Rawan')) return 'RS';
+          if (name.includes('Batz')) return 'AB';
+          if (name.includes('Daniel')) return 'DN';
+          if (name.includes('Justin')) return 'JK';
+          if (name.includes('Michael')) return 'MC';
+          if (name.includes('Kyle')) return 'KB';
+          if (name.includes('Bata')) return 'BG';
+          if (name.includes('Fred')) return 'FB';
           const parts = name.trim().split(' ');
           if (parts.length >= 2) return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
           return name.slice(0, 2).toUpperCase();
@@ -503,24 +603,31 @@
         const openEditModal = (card) => {
           activeCard.value = JSON.parse(JSON.stringify(card));
           if (!activeCard.value.leadEditor) activeCard.value.leadEditor = 'Christian Averill';
-          if (!activeCard.value.actionOwner) activeCard.value.actionOwner = activeCard.value.author || 'Christian Averill';
+          if (!activeCard.value.actionOwner) activeCard.value.actionOwner = 'Kat Eller Murray';
           nextTick(() => lucide.createIcons());
         };
 
         const openNewModal = () => {
-          const author = userEmail.value.includes('kat') ? 'Kat Eller Murray' : (userEmail.value.includes('jascha') ? 'Jascha Kaykas-Wolff' : 'Christian Averill');
           activeCard.value = {
-            id: String(Date.now()),
-            title: 'New Story Angle',
-            deck: 'Outline core thesis and target audience hook...',
-            pillar: 'Visual Quality (VQ)',
-            channel: 'LinkedIn',
-            author: author,
+            id: 'story-' + Date.now(),
+            title: 'New Story Title',
+            deck: 'Outline core thesis, hook, and target audience...',
+            pillar: 'Plane 2: Customer Features & Launches',
+            plane: 2,
+            channel: 'Blog, LinkedIn',
+            author: 'Visiting Media',
             leadEditor: 'Christian Averill',
-            actionOwner: author,
-            nextAction: 'Outline Thesis',
-            targetDate: 'Upcoming',
+            actionOwner: 'Kat Eller Murray',
+            nextAction: 'Outline & Angle Review',
+            targetDate: new Date().toISOString().split('T')[0],
             stage: 'backlog',
+            distribution: {
+              primaryChannel: 'Visiting Media Blog & LinkedIn',
+              targetAudience: 'DOSMs, VP Sales, Portfolio Teams',
+              distroOwner: 'Kat Eller Murray',
+              newsletterIncluded: true,
+              newsletterAudience: 'Executive Newsletter'
+            },
             assets: { graphic: false, quotes: false, metrics: false }
           };
           nextTick(() => lucide.createIcons());
@@ -550,6 +657,7 @@
           cards,
           selectedPillar,
           selectedAuthor,
+          selectedEditor,
           selectedActionOwner,
           activeCard,
           isAuthenticated,
