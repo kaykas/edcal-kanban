@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/(.*)", "destination": "https://qp-newsroom.vercel.app/$1", "permanent": true }
+  ]
+}
